@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# USAGE: bin/release <build-dir>
+
+BUILD_DIR=$1
+
+cat <<-YAML
+---
+default_process_types:
+  web: node build/bundle/main.js
+YAML
